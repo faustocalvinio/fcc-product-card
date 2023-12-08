@@ -22,12 +22,7 @@ export const ProductContext = createContext({} as ProductContextProps);
 
 export const ProductCard = ({children,product,className,style,onChange,value,initialValues}:Props) => {
 
-    const { counter, increaseBy, maxCount, isMaxCountReached, reset } = useProduct({
-        onChange,
-        initialValues,
-        product,
-        value
-    });   
+    const { counter, increaseBy, maxCount, isMaxCountReached, reset } = useProduct({  onChange, initialValues, product, value });   
         
     return (
         <ProductContext.Provider value={{
